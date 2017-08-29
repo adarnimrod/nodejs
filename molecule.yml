@@ -35,7 +35,7 @@ vagrant:
   - name: wheezy
     box: bmorg/debian-wheezy-i386
   instances:
-  - name: example
+  - name: nodejs
     options:
         append_platform_to_hostname: yes
   raw_config_args:

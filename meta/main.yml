@@ -1,22 +1,17 @@
 galaxy_info:
   author: Nimrod Adar
-  description: An example Ansible role
+  description: Install Node.js on Debian or Ubuntu from packages in NodeSource' repository
   company: Shore technologies
   license: MIT
   min_ansible_version: 2.3
   platforms:
-  - name: OpenBSD
-    versions:
-    - 6.0
   - name: Ubuntu
     versions:
     - xenial
     - trusty
-    - precise
   - name: Debian
     versions:
     - stretch
     - jessie
-    - wheezy
-  galaxy_tags: [ ansible ]
+  galaxy_tags: [ nodejs ]
 dependencies: []

@@ -1,12 +1,10 @@
-Example
+Node.js
 #######
 
-.. image:: https://travis-ci.org/adarnimrod/example.svg?branch=master
-    :target: https://travis-ci.org/adarnimrod/example
+.. image:: https://travis-ci.org/adarnimrod/nodejs.svg?branch=master
+    :target: https://travis-ci.org/adarnimrod/nodejs
 
-An (empty) example Ansible role complete with working tests out of the box. For
-more information read the `blog post
-<https://www.shore.co.il/blog/ansible-example-role/>`_.
+Install Node.js on Debian or Ubuntu from packages in NodeSource' repository.
 
 Requirements
 ------------

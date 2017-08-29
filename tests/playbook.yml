@@ -1,5 +1,5 @@
 ---
-- hosts: example-openbsd*
+- hosts: nodejs-openbsd*
   gather_facts: false
   roles:
       - openbsd-bootstrap
@@ -8,7 +8,7 @@
         users_use_sudo: True
         users_lock_root_ssh: False
 
-- hosts: [example-xenial, example-wheezy]
+- hosts: [nodejs-xenial, nodejs-wheezy]
   gather_facts: false
   roles:
       - debian-bootstrap
@@ -19,4 +19,4 @@
 
 - hosts: all
   roles:
-    - role: example
+    - role: nodejs

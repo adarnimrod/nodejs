@@ -1,2 +1,4 @@
 ---
-# defaults file for example
+# defaults file for nodejs
+
+nodejs_version: 8 # or 6.
