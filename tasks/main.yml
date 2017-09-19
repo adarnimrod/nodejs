@@ -1,12 +1,17 @@
 ---
 # tasks file for nodejs
 
+- name: Load meta vars
+  include_vars:
+      file: meta/main.yml
+      name: meta
+
 - name: Assertions
   assert:
     that:
-        - ansible_os_family == 'Debian'
-        - ansible_lsb is mapping
-        - ansible_lsb.codename in ['buster', 'jessie', 'sid', 'stretch', 'trusty', 'xenial', 'yakkety', 'zesty']
+        - ansible_distribution in meta.galaxy_info.platforms|map(attribute='name')
+        - |
+            (meta.galaxy_info.platforms|selectattr('name', 'equalto', ansible_distribution)|first).versions|intersect([ansible_distribution_release, ansible_distribution_version])|length > 0
         - nodejs_version in [6, 8]
 
 - name: APT install prerequisites
